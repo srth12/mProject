@@ -1,0 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_session["n"])){$_session["n"]=0;}
+else{$_session["n"]=$_session["n"]+1;}
+echo $_session["n"];
+$output=$_GET['output'];
+$file = fopen("test.txt","w");
+fwrite($file,$output);
+fclose($file);
+
+
+?>

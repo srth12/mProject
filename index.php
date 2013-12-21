@@ -24,6 +24,10 @@ output=output+http.responseText+' ,';//put a comma in quotes
 output=output.slice(0,-1);
 output=output+' ] }';
 
+//started new
+//header("Location: localhost/write.php?output="+output);
+window.location.assign("./write.php?output="+output)
+//end
 /*
 
 for(var i=imdbId;i<imdbId+5;i++){
@@ -34,7 +38,7 @@ output=output+i+"\n";
 var omdbJSON = eval("(" + output + ")");
 //var omdbJSON=JSON.parse(output);
 //document.write(omdbJSON.employees[0].Title);
-document.write(output);
+//document.write(output); //newly edited
 // Returns Movie Title
 //alert(omdbJSON.Title);
 /*
@@ -47,7 +51,4 @@ myJavascriptFunction();
 */
 </script>
 </head>
-<body>
-
-</body>
 </html>
