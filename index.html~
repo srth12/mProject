@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript">
+
+// IMDb ID to Search
+var imdbId = "tt1285016";
+
+// Send Request
+var http = new XMLHttpRequest();
+http.open("GET", "http://www.omdbapi.com/?tomatoes=True&i=" + imdbId, false);
+http.send(null);
+
+// Response to JSON
+var omdbData = http.responseText;
+var omdbJSON = eval("(" + omdbData + ")");
+//document.getElementById("content").innerHTML="hhh";
+document.write(omdbData);
+// Returns Movie Title
+alert(omdbJSON.Title);
+//alert(omdbJSON);
+
+</script>
+</head>
+<body >
+ <div id="content">aa</div>
+
+</body>
+</html>
