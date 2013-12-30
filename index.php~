@@ -9,9 +9,13 @@ var imdbId = 1285016;
 
 var http = new XMLHttpRequest();
 var omdbData="";
+<?php
 
 
-for(var i=1;i<2;i++){
+session_start();
+$_SESSION["count"]=0;
+?>
+for(var i=0;i<3;i++){
 var output='';
 var l="";
 
@@ -27,7 +31,7 @@ http.send();
 
 // Response to JSON
 
-output=http.responseText;//put a comma in quotes
+output=http.responseText;//
 
 
 
