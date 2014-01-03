@@ -25,7 +25,7 @@ def from_year(year):#To find all pages in a given year
 	p=soup.find_all('span',class_="pagination")
 	from_page(url,year) #initial page
 	no_of_flims=soup.find_all('div',id="left")[0].contents[0].split()[2]
-	no_str=no_of_flims.split(',')[0]#+no_of_flims.split(',')[1]
+	no_str=no_of_flims.split(',')[0]+no_of_flims.split(',')[1]
 	no=int(no_str)/50 #remining pages
 	for i in range(no):
 		response = urllib2.urlopen(url)
@@ -38,6 +38,6 @@ def from_year(year):#To find all pages in a given year
 		from_page(url,year)
 
 if __name__ == "__main__":
-    for i in range(2000,2011):
+    for i in [2003,2004,2007,2008,2010]:
     	from_year(i)
 
