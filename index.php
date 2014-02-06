@@ -15,7 +15,7 @@ var omdbData="";
 session_start();
 $_SESSION["count"]=0;
 ?>
-for(var i=0;i<5667;i++){
+for(var i=0;i<4894;i++){
 var output='';
 var l="";
 
