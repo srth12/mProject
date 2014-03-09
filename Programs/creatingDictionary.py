@@ -14,7 +14,7 @@ def parse_file(datafile):
         header = f.readline().split(",")
         counter = 0
         for line in f:
-            if counter == 100:
+            if counter == 10:
                 break
             fields = line.split()
             entry = {}
